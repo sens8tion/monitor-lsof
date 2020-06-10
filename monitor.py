@@ -7,4 +7,4 @@ def num_lsof_user(user):
 
 users = ['root', 'johnedwards']
 for user in users:
-    print(f"{user}: {num_lsof_user(user)}")
+    print(user + ": " + str(num_lsof_user(user)))
