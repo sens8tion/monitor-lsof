@@ -23,4 +23,4 @@ while True:
     row = {"time":time.asctime()}
     for user in users:
         row[user] = num_lsof_user(user)
-    print(row)
+    print(json.dumps(row))
