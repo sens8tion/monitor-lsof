@@ -57,4 +57,5 @@ api.add_resource(UserById, "/user/<int:id>")
 api.add_resource(UserByName, "/user/<string:name>")
 api.add_resource(NumLSOF, "/NumLSOF")
 
-app.run()
+if __name__ == "__main__":
+    app.run()
