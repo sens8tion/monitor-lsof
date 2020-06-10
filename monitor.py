@@ -22,10 +22,13 @@ def num_lsof_user(user):
 
 
 users = ["all", "root", "homeassistant"]
+time_between_readings = 60
+output = "/tmp/lsof.log"
 while True:
     row = {"time": time.asctime()}
-    sleeptime = 60 - datetime.utcnow().second
+    sleeptime = time_between_readings - datetime.utcnow().second
     time.sleep(sleeptime)
     for user in users:
         row[user] = num_lsof_user(user)
-    print(json.dumps(row))
+    with open(output, "a") as file_object:
+        file_object.write(json.dumps(row) + "\n")
