@@ -29,5 +29,5 @@ while True:
     time.sleep(4)
     for user in usersList:
         lsof = num_lsof_user(user)
-        print(f"{user} open files: {lsof}")
+        # print(f"{user} open files: {lsof}")
         graphyte.send(user, num_lsof_user(user))
