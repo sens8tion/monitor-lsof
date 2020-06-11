@@ -11,6 +11,7 @@ matplotlib = "*"
 flask-restful = "*"
 flask = "*"
 requests = "*"
+graphyte = "*"
 
 [requires]
 python_version = "3.8"
