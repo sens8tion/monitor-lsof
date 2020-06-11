@@ -23,7 +23,7 @@ def num_lsof_user(user):
 usersList = ["all", "root", "homeassistant"]
 grafitehost = "edsoft.duckdns.org"
 
-graphyte.init(grafitehost, prefix="stats")
+graphyte.init(grafitehost, prefix="stats.ha.lsof")
 
 while True:
     time.sleep(4)
